@@ -10,6 +10,7 @@ class ProductProvider extends Component {
         cartOpen: false,
         cartItem: 11,
         links: linkData,
+        cart: [],
     };
     // handel sidebar
     handleSidebar = () => {

@@ -23,7 +23,7 @@ const CartWrapper = styled.div`
     right: 0;
     width: 100%;
     height: 100%;
-    background: var(--mainGray);
+    background: var(--mainGrey);
     z-index: 1;
 
     transform: ${(props) =>

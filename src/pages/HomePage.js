@@ -1,6 +1,8 @@
 import React from "react";
 import Hero from "../components/Hero";
 import { Link } from "react-router-dom";
+import Featured from "../components/HomePage/Featured";
+import Services from "../components/HomePage/Services";
 
 export default function HomePage() {
     // open cart
@@ -15,6 +17,8 @@ export default function HomePage() {
                     Our Products
                 </Link>
             </Hero>
+            <Services />
+            <Featured />
         </>
     );
 }

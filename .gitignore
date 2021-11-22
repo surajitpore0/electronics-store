@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/pass.txt
 /.pnp
 .pnp.js
 

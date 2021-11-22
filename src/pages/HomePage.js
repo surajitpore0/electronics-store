@@ -6,8 +6,14 @@ export default function HomePage() {
     // open cart
     return (
         <>
-            <Hero>
-                <Link to="/products">Our Products</Link>
+            <Hero title="awesome gadgets" max="false">
+                <Link
+                    to="/products"
+                    className="main-link"
+                    style={{ margin: ".5rem" }}
+                >
+                    Our Products
+                </Link>
             </Hero>
         </>
     );

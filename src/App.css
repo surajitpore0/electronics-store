@@ -25,3 +25,25 @@ body {
     background: var(--mainGrey) !important;
     color: var(--mainBlack) !important;
 }
+
+.main-link {
+    padding: 0.5rem 1rem;
+    background: var(--primaryColor);
+    color: var(--mainWhite);
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: var(--mainSpacing);
+    /* font-size: 2rem; */
+    outline: 2px solid var(--primaryColor);
+    outline-offset: 4px;
+    border: none;
+    transition: var(--mainTransition);
+}
+
+.main-link:hover {
+    background: var(--mainGrey);
+    color: var(--primaryColor);
+    outline: 2px solid var(--mainGrey);
+    text-decoration: none;
+}

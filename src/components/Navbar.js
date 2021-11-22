@@ -33,13 +33,15 @@ export default function Navbar() {
 }
 
 const NavWrapper = styled.nav`
-    position: --webkit-sticky;
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     width: 100%;
     padding: 1rem 1.5rem;
-    background: var(--mainGray);
+    background: var(--mainGrey);
     border-bottom: 2px solid var(--primaryColor);
+    z-index: 1;
+
     .nav-center {
         display: flex;
         align-items: center;

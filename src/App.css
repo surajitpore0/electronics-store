@@ -42,7 +42,7 @@ body {
 }
 
 .main-link:hover {
-    background: var(--mainGrey);
+    background: var(--darkGrey);
     color: var(--primaryColor);
     outline: 2px solid var(--mainGrey);
     text-decoration: none;

@@ -47,3 +47,7 @@ body {
     outline: 2px solid var(--mainGrey);
     text-decoration: none;
 }
+
+.cart-icon:hover {
+    cursor: pointer;
+}

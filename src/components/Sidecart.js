@@ -18,8 +18,8 @@ export default function Sidecart() {
                                         className="cart-item mb-4"
                                     >
                                         <img
-                                            src={`../${item.image}`}
-                                            // src={image}
+                                            // src={`../${item.image}`}
+                                            src={item.image}
                                             width="35px"
                                             alt="cart item"
                                         />

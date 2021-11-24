@@ -267,10 +267,53 @@ class ProductProvider extends Component {
 
     // handel filtering
     handleChange = (event) => {
-        console.log(event);
+        const name = event.target.name;
+        const value =
+            event.target.type === "checkbox"
+                ? event.target.checked
+                : event.target.value;
+
+        console.log(`Name :${name}, value :${value}`);
+        this.setState(
+            {
+                [name]: value,
+            },
+            this.sortData
+        );
     };
 
-    sortData = () => {};
+    sortData = () => {
+        const { storeProducts, price, company, shipping, search } = this.state;
+        let tempProducts = [...storeProducts];
+
+        let tempPrice = parseInt(price);
+
+        tempProducts = tempProducts.filter((item) => item.price <= tempPrice);
+
+        if (shipping) {
+            tempProducts = tempProducts.filter(
+                (item) => item.shipping === true
+            );
+        }
+
+        if (search.length > 0) {
+            tempProducts = tempProducts.filter((item) => {
+                let tempSearch = search.toLowerCase();
+                let tempTitle = item.title
+                    .toLowerCase()
+                    .slice(0, search.length);
+                if (tempSearch === tempTitle) {
+                    return item;
+                }
+            });
+        }
+        if (company !== "all") {
+            tempProducts = tempProducts.filter(
+                (item) => item.company === company
+            );
+        }
+        this.setState({ filteredProducts: tempProducts });
+    };
 
     render() {
         return (

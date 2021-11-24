@@ -24,6 +24,7 @@ export default function ProductsFilter() {
                 }
 
                 companies = [...companies];
+
                 return (
                     <div className="row my-5">
                         <div className="col-10 mx-auto">
@@ -51,7 +52,7 @@ export default function ProductsFilter() {
                                         name="company"
                                         id="company"
                                         className="filter-item"
-                                        onClick={handleChange}
+                                        onChange={handleChange}
                                         value={company}
                                     >
                                         {/* <option value="all">all</option>
@@ -59,7 +60,7 @@ export default function ProductsFilter() {
                                         {companies.map((company, index) => {
                                             return (
                                                 <option
-                                                    key="index"
+                                                    key={index}
                                                     value={company}
                                                 >
                                                     {company}
@@ -81,10 +82,11 @@ export default function ProductsFilter() {
                                     <input
                                         type="range"
                                         name="price"
+                                        id="price"
                                         min={min}
                                         max={max}
-                                        onClick={handleChange}
-                                        value="price"
+                                        onChange={handleChange}
+                                        value={price}
                                         className="filter-price"
                                     />
                                 </div>
@@ -99,7 +101,7 @@ export default function ProductsFilter() {
                                         type="checkbox"
                                         name="shipping"
                                         id="shipping"
-                                        onClick={handleChange}
+                                        onChange={handleChange}
                                         checked={shipping && true}
                                     />
                                 </div>

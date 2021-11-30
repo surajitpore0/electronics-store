@@ -26,6 +26,12 @@ export default function SinglePage() {
                                             // src={`../${image}`}
                                             src={image}
                                             className="image-fluid"
+                                            style={{
+                                                maxWidth: "300px",
+                                                display: "flex",
+                                                alignItems: "center",
+                                                justifyContent: "center",
+                                            }}
                                             alt="single product"
                                         />
                                     </div>
